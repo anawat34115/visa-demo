@@ -1,264 +1,325 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Visa & Legal Services</title>
-    <!-- Tailwind CSS -->
+    <title>Lorem Ipsum - Agency Template</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Sarabun -->
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B00', 
+                        secondary: '#2D3748', 
+                        accent: '#FFC107',
+                        text: '#4A5568',      
+                        light: '#FFF9F5',     
+                    },
+                    fontFamily: {
+                        heading: ['Inter', 'sans-serif'], 
+                        body: ['Inter', 'sans-serif'],  
+                    },
+                    boxShadow: {
+                        'card': '0 10px 30px rgba(0,0,0,0.08)',
+                        'hover': '0 20px 40px rgba(255,107,0,0.15)',
+                    }
+                }
+            }
         }
-        .style-hidden {
-            display: none;
-        }
-        .line-color {
-            background-color: #06C755;
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-slate-50">
+<body class="font-body text-text antialiased bg-white">
 
-    <!-- Style Switcher -->
-    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-2xl border border-blue-100 flex items-center gap-4">
-        <span class="text-xs font-bold text-slate-400 uppercase mr-2 hidden sm:inline">เลือกดีไซน์หน้าติดต่อ:</span>
-        <button onclick="switchStyle(1)" id="btn-1" class="style-btn w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all bg-blue-900 text-white border-blue-900 scale-110 shadow-lg">1</button>
-        <button onclick="switchStyle(2)" id="btn-2" class="style-btn w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all bg-white text-slate-400 border-slate-200 hover:border-blue-400">2</button>
-        <button onclick="switchStyle(3)" id="btn-3" class="style-btn w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all bg-white text-slate-400 border-slate-200 hover:border-blue-400">3</button>
-    </div>
-
-    <!-- --- STYLE 1: PROFESSIONAL TRUST --- -->
-    <div id="style-1" class="style-container">
-        <header class="bg-blue-900 py-20 px-6 text-center text-white">
-            <h1 class="text-4xl font-bold mb-4">ติดต่อเรา / นัดปรึกษา</h1>
-            <p class="text-blue-200 opacity-90 max-w-2xl mx-auto font-light">พร้อมให้คำแนะนำและช่วยเหลือทุกขั้นตอนการทำวีซ่าและงานเอกสาร</p>
-        </header>
-
-        <main class="max-w-5xl mx-auto px-6 -mt-10 pb-32">
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="phone"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">เบอร์โทรศัพท์</h3>
-                    <p class="text-blue-900 font-bold text-lg">098-953-4356</p>
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="h-10 w-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <i class="fas fa-cube"></i>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="clock"></i>
+                <span class="font-heading font-bold text-2xl text-secondary">LOGO</span>
+            </a>
+
+            <nav class="hidden md:flex gap-8 font-heading font-medium text-secondary text-lg">
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#services" class="hover:text-primary transition">Services</a>
+                <a href="#why-us" class="hover:text-primary transition">About</a>
+                <a href="#process" class="hover:text-primary transition">Process</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex bg-primary text-white px-6 py-2.5 rounded-full font-heading font-medium hover:bg-orange-600 transition shadow-lg shadow-orange-200">
+                <i class="fas fa-paper-plane mr-2"></i> Get Started
+            </a>
+            
+            <button class="md:hidden text-2xl text-secondary"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-16 pb-28 bg-light overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="text-center lg:text-left z-10">
+                    <h4 class="text-primary font-heading font-bold mb-4 uppercase tracking-wider text-sm bg-orange-100 inline-block px-3 py-1 rounded-full border border-orange-200">
+                        ✨ Lorem ipsum dolor sit amet consectetur
+                    </h4>
+                    <h1 class="text-4xl lg:text-6xl font-heading font-bold text-secondary leading-tight mb-6">
+                        Lorem Ipsum <br>
+                        <span class="text-primary">Consectetur Adipiscing</span> <br>
+                        Sed Do Eiusmod
+                    </h1>
+                    <p class="text-lg text-gray-500 mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-xl font-heading font-bold shadow-lg hover:translate-y-[-5px] transition duration-300">
+                            Free Trial
+                        </a>
+                        <a href="#services" class="bg-white text-secondary border border-gray-200 px-8 py-4 rounded-xl font-heading font-bold hover:border-primary hover:text-primary transition duration-300">
+                            Learn More
+                        </a>
                     </div>
-                    <h3 class="font-bold text-slate-800 mb-2">เวลาทำการ</h3>
-                    <p class="text-slate-600">10.00 - 18.00 น.</p>
-                    <p class="text-red-500 text-sm font-medium">หยุดวันเสาร์ - อาทิตย์</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="map-pin"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-2">สถานที่ตั้ง</h3>
-                    <p class="text-slate-600">บีทีเอสอุดมสุข</p>
+
+                <div class="relative flex justify-center z-10">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[450px] aspect-square bg-white rounded-full shadow-2xl z-0 border-8 border-white/50"></div>
+                    <img src="https://via.placeholder.com/600x600/FF6B00/FFFFFF?text=Product+Image" alt="Hero Image" class="relative z-10 w-3/4 rounded-3xl hover:scale-105 transition duration-500 drop-shadow-xl">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="mt-12 bg-white rounded-3xl p-10 shadow-lg border border-slate-100 text-center">
-                <h2 class="text-2xl font-bold text-blue-900 mb-6">ปรึกษาเราผ่านช่องทางออนไลน์</h2>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                    <a href="#" class="line-color text-white px-12 py-4 rounded-full font-bold text-xl flex items-center hover:opacity-90 transition-all shadow-xl">
-                        <i data-lucide="message-square" class="mr-3"></i> LINE OA (คลิกเลย)
-                    </a>
-                    <a href="https://wa.me/66989534356" class="bg-slate-800 text-white px-10 py-4 rounded-full font-bold text-lg flex items-center hover:bg-slate-700 transition-all">
-                        <i data-lucide="phone-call" class="mr-3 w-5 h-5"></i> WhatsApp
-                    </a>
+    <section class="py-10 bg-white -mt-8 relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-card p-6 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100 border border-gray-100">
+                <div class="text-center">
+                    <div class="text-3xl font-heading font-bold text-primary mb-1">99%</div>
+                    <div class="text-sm text-gray-500">Lorem Ipsum</div>
                 </div>
-                <div class="mt-10 p-6 bg-blue-50 rounded-2xl inline-block border border-blue-100">
-                    <p class="text-blue-800 font-medium">“ สามารถนัดปรึกษาออนไลน์หรือสถานที่ที่สะดวกได้ ”</p>
+                <div class="text-center">
+                    <div class="text-3xl font-heading font-bold text-primary mb-1">500+</div>
+                    <div class="text-sm text-gray-500">Dolor Sit</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-heading font-bold text-primary mb-1">24/7</div>
+                    <div class="text-sm text-gray-500">Amet Consect</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-heading font-bold text-primary mb-1">10k+</div>
+                    <div class="text-sm text-gray-500">Adipiscing</div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <!-- --- STYLE 2: MODERN DIRECT --- -->
-    <div id="style-2" class="style-container style-hidden">
-        <div class="min-h-screen bg-white">
-            <div class="flex flex-col md:flex-row min-h-screen">
-                <!-- Left: Info -->
-                <div class="md:w-1/2 bg-blue-900 text-white p-12 md:p-24 flex flex-col justify-center">
-                    <h1 class="text-5xl font-black mb-8 leading-tight">GET IN TOUCH<br><span class="text-blue-400">ติดต่อเรา</span></h1>
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <i data-lucide="map-pin" class="mr-6 text-blue-400 w-8 h-8"></i>
-                            <div>
-                                <h4 class="font-bold text-xl">ที่อยู่</h4>
-                                <p class="opacity-70">บีทีเอสอุดมสุข (สามารถนัดสถานที่ที่สะดวกได้)</p>
-                            </div>
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-heading font-bold text-secondary mb-4">Our Services</h2>
+                <div class="w-20 h-1.5 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-500">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-hover transition duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Service" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-primary text-xl mb-4">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="flex items-start">
-                            <i data-lucide="clock" class="mr-6 text-blue-400 w-8 h-8"></i>
-                            <div>
-                                <h4 class="font-bold text-xl">เวลาให้บริการ</h4>
-                                <p class="opacity-70">จันทร์ - ศุกร์ | 10.00 - 18.00 น.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i data-lucide="info" class="mr-6 text-blue-400 w-8 h-8"></i>
-                            <div>
-                                <h4 class="font-bold text-xl">บริการพิเศษ</h4>
-                                <p class="opacity-70 italic text-blue-200">ยินดีนัดปรึกษาออนไลน์ผ่านวิดีโอคอล</p>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-3 group-hover:text-primary transition">Lorem Ipsum Dolor</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <a href="#" class="text-primary font-bold text-sm flex items-center gap-2">Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Right: Action Buttons -->
-                <div class="md:w-1/2 p-12 md:p-24 flex flex-col justify-center bg-slate-50">
-                    <div class="max-w-md mx-auto w-full space-y-6">
-                        <div class="text-center mb-10">
-                            <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Contact Channels</p>
-                            <h2 class="text-3xl font-bold text-slate-800">เลือกช่องทางที่ท่านสะดวก</h2>
+                <div class="group bg-white rounded-2xl border-2 border-primary overflow-hidden shadow-card relative transform lg:-translate-y-4">
+                    <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full z-10">Featured</div>
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Service" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center text-xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-3 group-hover:text-primary transition">Sed Do Eiusmod</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <a href="#" class="text-primary font-bold text-sm flex items-center gap-2">Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                        <a href="#" class="flex items-center p-6 bg-white rounded-3xl border-2 border-transparent hover:border-green-500 shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-16 h-16 line-color text-white rounded-2xl flex items-center justify-center mr-6 shadow-lg">
-                                <i data-lucide="message-circle" class="w-8 h-8"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-bold text-xl text-slate-800">LINE Official Account</h4>
-                                <p class="text-slate-500 text-sm">ปรึกษาด่วนกับเจ้าหน้าที่</p>
-                            </div>
-                            <i data-lucide="chevron-right" class="text-slate-300 group-hover:text-green-500 transition-colors"></i>
-                        </a>
-
-                        <a href="tel:0989534356" class="flex items-center p-6 bg-white rounded-3xl border-2 border-transparent hover:border-blue-500 shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mr-6 shadow-lg">
-                                <i data-lucide="phone" class="w-8 h-8"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-bold text-xl text-slate-800">098-953-4356</h4>
-                                <p class="text-slate-500 text-sm">โทรสายตรงเพื่อรับบริการ</p>
-                            </div>
-                            <i data-lucide="chevron-right" class="text-slate-300 group-hover:text-blue-500 transition-colors"></i>
-                        </a>
-
-                        <a href="https://wa.me/66989534356" class="flex items-center p-6 bg-white rounded-3xl border-2 border-transparent hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all group">
-                            <div class="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mr-6 shadow-lg">
-                                <i data-lucide="send" class="w-8 h-8"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-bold text-xl text-slate-800">WhatsApp Contact</h4>
-                                <p class="text-slate-500 text-sm">ส่งข้อความผ่าน WhatsApp</p>
-                            </div>
-                            <i data-lucide="chevron-right" class="text-slate-300 group-hover:text-emerald-500 transition-colors"></i>
-                        </a>
+                <div class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-hover transition duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Service" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-primary text-xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary mb-3 group-hover:text-primary transition">Tempor Incididunt</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.
+                        </p>
+                        <a href="#" class="text-primary font-bold text-sm flex items-center gap-2">Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- --- STYLE 3: MINIMALIST CARD --- -->
-    <div id="style-3" class="style-container style-hidden">
-        <div class="min-h-screen py-20 px-6 bg-slate-50">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="px-4 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-widest">Connect with us</span>
-                    <h1 class="text-4xl font-black text-slate-800 mt-4">นัดหมายปรึกษา</h1>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12">
-                    <!-- Left: Details -->
-                    <div class="space-y-10">
-                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                            <h3 class="text-xl font-bold text-blue-900 mb-6 flex items-center">
-                                <i data-lucide="calendar" class="mr-2 text-blue-500"></i> รายละเอียดนัดหมาย
-                            </h3>
-                            <div class="space-y-6">
-                                <div class="flex items-center justify-between py-3 border-b border-slate-50">
-                                    <span class="text-slate-500">วันทำการ</span>
-                                    <span class="font-bold text-slate-800">จันทร์ - ศุกร์</span>
-                                </div>
-                                <div class="flex items-center justify-between py-3 border-b border-slate-50">
-                                    <span class="text-slate-500">เวลาทำการ</span>
-                                    <span class="font-bold text-slate-800">10.00 - 18.00 น.</span>
-                                </div>
-                                <div class="flex items-center justify-between py-3">
-                                    <span class="text-slate-500 font-medium">สถานที่หลัก</span>
-                                    <span class="px-3 py-1 bg-slate-100 rounded-lg font-bold text-slate-700">BTS อุดมสุข</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-l-4 border-blue-500 bg-blue-50 rounded-r-2xl">
-                            <p class="text-blue-900 leading-relaxed font-medium">
-                                "สามารถนัดปรึกษาออนไลน์ <br>หรือสถานที่ที่สะดวกสำหรับคุณได้ทุกเมื่อ"
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Right: Contact -->
+    <section id="why-us" class="py-20 bg-secondary text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-primary font-bold tracking-widest text-sm uppercase mb-2 block">Our Benefits</span>
+                    <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-6">Why Choose Our Platform?</h2>
+                    <p class="text-gray-300 mb-8 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    
                     <div class="space-y-6">
-                        <div class="text-center md:text-left mb-4">
-                            <h3 class="text-lg font-bold text-slate-800">ช่องทางติดต่อหลัก</h3>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white text-xl shrink-0">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Fast Performance</h4>
+                                <p class="text-gray-400 text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            </div>
                         </div>
-                        
-                        <a href="#" class="block w-full line-color text-white text-center py-6 rounded-3xl font-black text-2xl shadow-lg hover:-translate-y-1 transition-all">
-                            LINE OA
-                        </a>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <a href="tel:0989534356" class="bg-white border border-slate-200 p-6 rounded-3xl text-center hover:border-blue-500 transition-all shadow-sm">
-                                <i data-lucide="phone" class="mx-auto mb-2 text-blue-600"></i>
-                                <span class="block text-xs font-bold text-slate-400 uppercase">Phone</span>
-                                <span class="font-bold text-slate-800 text-sm">098-953-4356</span>
-                            </a>
-                            <a href="https://wa.me/66989534356" class="bg-white border border-slate-200 p-6 rounded-3xl text-center hover:border-emerald-500 transition-all shadow-sm">
-                                <i data-lucide="send" class="mx-auto mb-2 text-emerald-600"></i>
-                                <span class="block text-xs font-bold text-slate-400 uppercase">WhatsApp</span>
-                                <span class="font-bold text-slate-800 text-sm">คลิกเพื่อส่งข้อความ</span>
-                            </a>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Secure & Reliable</h4>
+                                <p class="text-gray-400 text-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Feature" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full max-w-md transform rotate-2 hover:rotate-0 transition duration-500">
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Global Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6 border-t border-slate-800 text-center">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-sm font-light">© 2024 Visa & Legal Consultation Service. All rights reserved.</p>
-            <div class="flex justify-center gap-6 mt-6">
-                <span class="hover:text-white cursor-pointer transition-colors text-sm">หน้าแรก</span>
-                <span class="hover:text-white cursor-pointer transition-colors text-sm">บริการของเรา</span>
-                <span class="hover:text-white cursor-pointer transition-colors text-sm">ติดต่อเรา</span>
+    <section id="process" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-heading font-bold text-secondary mb-4">How It Works</h2>
+                <p class="text-gray-500">Simple 4-step process to get you started</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gray-200 z-0"></div>
+
+                <div class="relative z-10 text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary rounded-full flex items-center justify-center text-3xl text-primary mb-6 shadow-card group-hover:bg-primary group-hover:text-white transition duration-300">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold mb-2">Step One</h3>
+                    <p class="text-sm text-gray-500 px-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="relative z-10 text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary rounded-full flex items-center justify-center text-3xl text-primary mb-6 shadow-card group-hover:bg-primary group-hover:text-white transition duration-300">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold mb-2">Step Two</h3>
+                    <p class="text-sm text-gray-500 px-4">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+
+                <div class="relative z-10 text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary rounded-full flex items-center justify-center text-3xl text-primary mb-6 shadow-card group-hover:bg-primary group-hover:text-white transition duration-300">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold mb-2">Step Three</h3>
+                    <p class="text-sm text-gray-500 px-4">Duis aute irure dolor in reprehenderit in voluptate.</p>
+                </div>
+
+                <div class="relative z-10 text-center group">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary rounded-full flex items-center justify-center text-3xl text-primary mb-6 shadow-card group-hover:bg-primary group-hover:text-white transition duration-300">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold mb-2">Step Four</h3>
+                    <p class="text-sm text-gray-500 px-4">Excepteur sint occaecat cupidatat non proident.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-secondary to-gray-800 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6 relative z-10">พร้อมยกระดับความสะอาดหรือยัง?</h2>
+                <p class="text-gray-300 mb-10 text-lg max-w-2xl mx-auto relative z-10">
+                    ติดต่อเราวันนี้ เพื่อรับคำปรึกษาและนัดสำรวจพื้นที่ฟรี ไม่ว่าจะเป็นออฟฟิศ ร้านอาหาร หรือที่พักอาศัย
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+                    <a href="tel:021234567" class="bg-primary text-white px-8 py-4 rounded-xl font-heading font-bold hover:bg-orange-600 transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-alt"></i> 02-XXX-XXXX
+                    </a>
+                    <a href="#" class="bg-green-500 text-white px-8 py-4 rounded-xl font-heading font-bold hover:bg-green-600 transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fab fa-line text-xl"></i> แอดไลน์ปรึกษา
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white pt-16 pb-8 border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 pb-12 mb-8 border-b border-gray-700">
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-heading font-bold mb-4">LOGO.</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-primary">Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Service One</a></li>
+                        <li><a href="#" class="hover:text-white">Service Two</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-primary">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@example.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-primary">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-xs text-gray-500">
+                &copy; 2026 Your Brand Name. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Style Switcher Logic
-        function switchStyle(styleNum) {
-            // Hide all style containers
-            document.querySelectorAll('.style-container').forEach(el => el.classList.add('style-hidden'));
-            // Show the selected style container
-            document.getElementById(`style-${styleNum}`).classList.remove('style-hidden');
-            
-            // Update button styles
-            document.querySelectorAll('.style-btn').forEach(btn => {
-                btn.className = "style-btn w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all bg-white text-slate-400 border-slate-200 hover:border-blue-400";
-            });
-            const activeBtn = document.getElementById(`btn-${styleNum}`);
-            activeBtn.className = "style-btn w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all bg-blue-900 text-white border-blue-900 scale-110 shadow-lg";
-        }
-
-        // Initialize Lucide icons
-        window.onload = () => {
-            lucide.createIcons();
-        };
-    </script>
 </body>
 </html>
